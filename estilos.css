@@ -435,6 +435,13 @@ span{
     opacity: 0;
     transition: opacity .6s ease;
 }
+.tarjeta1-image::after{
+    z-index: 1;
+    pointer-events: none;   /* la capa oscura deja pasar el clic */
+}
+.tarjeta1-image .ver-especialidad{
+    z-index: 2;             /* el botón queda por encima de la capa */
+}
 
 .tarjeta1-image .ver-especialidad{
     position: absolute;
@@ -442,6 +449,7 @@ span{
     transform: translate(-50%, -50%) translateY(10px);
     background: #fff;
     color: #1F4C7D;
+    cursor: pointer;
     font-weight: 600;
     font-size: 16px;
     padding: 9px 18px;
@@ -1022,8 +1030,7 @@ span{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-align: left;
-    text-align-last: left;
+
     gap: 10px;
 }
 .section4-tarjeta-image a{
@@ -1055,6 +1062,9 @@ span{
 }
 .section4-tarjeta-text h6{
     color: #1F4C7D;
+}
+.section4-tarjeta-text p{
+    text-align: center;
 }
 .section4-tarjeta-image img{
     width: 100%;
@@ -1569,3 +1579,448 @@ details p{
     transform: scale(1.05);
     transition: 0.3s;
 }
+
+
+
+
+
+
+.sobrenosotros-hero{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#161616b3, #161616b3), url(/media/hero3.jpg) center center;
+    background-size: cover;
+}
+.sobrenosotros-hero-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 45px;
+}
+.sobrenosotros-hero-content h1{
+    color: white;
+    text-shadow: 1px 2px 3px rgba(40, 50, 70, 0.15);
+}
+
+
+
+
+
+.sobrenosotros1{
+    position: relative;                 /* agregar: para ubicar la mancha de fondo */
+    overflow: hidden;                   /* agregar: para que la mancha y el marco no se salgan de la sección */
+    width: 100%;
+    margin: 40px 0;
+    padding: 40px 140px;                /* antes 0 140px: da aire para que el marco de la foto no se corte */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* mancha de color muy sutil de fondo */
+.sobrenosotros1::before{
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: -8%;
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(31,76,125,0.14) 0%, rgba(31,76,125,0) 70%);
+    pointer-events: none;
+}
+
+.sobrenosotros1-content{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;                          /* antes 45px: más espacio entre foto y texto */
+}
+
+.sobrenosotros1-image{
+    position: relative;                 /* agregar: para el marco desplazado */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* marco desplazado detrás de la foto */
+.sobrenosotros1-image::before{
+    content: "";
+    position: absolute;
+    inset: 18px -18px -18px 18px;
+    border: 2px solid #4FA3B6;
+    border-radius: 20px;
+}
+.sobrenosotros1-image img{
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4/3;                  /* agregar: proporción fija sin importar la foto */
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 18px 40px rgba(31,76,125,0.18);
+}
+
+.sobrenosotros1-text{
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 14px;                          /* antes 10px */
+}
+.sobrenosotros1-text h3{
+    color: #1F4C7D;
+    font-size: 34px;
+    line-height: 1.15;
+}
+.sobrenosotros1-text h6{
+    color: #4FA3B6;
+    font-size: 17px;
+}
+.sobrenosotros1-text p{
+    color: #3A4750;
+    font-size: 15.5px;
+    line-height: 1.7;                   /* el cambio que más se nota en la lectura */
+    max-width: 56ch;
+}
+
+@media (max-width: 900px){
+    .sobrenosotros1{ padding: 30px 24px; }
+    .sobrenosotros1-content{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .sobrenosotros1-image::before{
+        inset: 12px -10px -12px 10px;
+    }
+}
+
+
+
+
+
+
+.sobrenosotros2{
+    width: 100%;
+    padding: 0px 140px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sobrenosotros2-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.sobrenosotros2-linea{
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 40px;
+}
+.sobrenosotros2-tarjeta{
+  width: calc((100% - 60px) / 3);   /* antes: 100% — ancho fijo basado en 3 columnas con 2 gaps de 30px entre ellas */
+    flex: 0 0 calc((100% - 60px) / 3); 
+    padding: 50px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #cee1f5;
+    gap: 10px;
+    box-sizing: border-box;
+        border-radius: 18px;             /* antes sin bordes redondeados */
+    border-top: 3px solid #1F4C7D;   /* el mismo acento de las tarjetas de Casos */
+    box-shadow: 0 10px 28px rgba(31, 76, 125, 0.10);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.sobrenosotros2-tarjeta:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(31, 76, 125, 0.16);
+}
+.sobrenosotros2-tarjeta-circle{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+}
+.sobrenosotros2-tarjeta-text{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+
+.sobrenosotros3{
+    position: relative;                  /* agregar */
+    overflow: hidden;                    /* agregar: para que el marco de la foto no se salga */
+    width: 100%;
+    margin: 80px 0;
+    padding: 40px 140px;                 /* antes 0 140px: da aire para el marco */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobrenosotros3-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;                           /* antes 45px */
+}
+
+.sobrenosotros3-image{
+    position: relative;                  /* agregar: para el marco desplazado */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* marco desplazado hacia la izquierda, espejo de la primera sección */
+.sobrenosotros3-image::before{
+    content: "";
+    position: absolute;
+    inset: 18px 18px -18px -18px;
+    border: 2px solid #4FA3B6;
+    border-radius: 20px;
+}
+.sobrenosotros3-image img{
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4/3;                   /* agregar: proporción fija sin importar la foto */
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 18px 40px rgba(31,76,125,0.18);
+}
+
+.sobrenosotros3-text{
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 14px;                           /* antes 10px */
+}
+.sobrenosotros3-text h3{
+    color: #1F4C7D;
+    font-size: 34px;
+    line-height: 1.15;
+}
+.sobrenosotros3-text h6{
+    color: #4FA3B6;
+    font-size: 17px;
+}
+.sobrenosotros3-text p{
+    color: #3A4750;
+    font-size: 15.5px;
+    line-height: 1.7;
+    max-width: 56ch;
+}
+
+/* lista de servicios en 2 columnas */
+.sobrenosotros3-lista{
+    list-style: none;
+    padding: 0;
+    margin: 6px 0 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 30px;
+}
+.sobrenosotros3-lista li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #17332F;
+}
+.sobrenosotros3-lista i{
+    color: #4FA3B6;
+    font-size: 16px;
+}
+
+@media (max-width: 900px){
+    .sobrenosotros3{ padding: 30px 24px; }
+    .sobrenosotros3-content{
+        flex-direction: column-reverse;  /* en móvil la foto va arriba y el texto abajo */
+        gap: 50px;
+    }
+    .sobrenosotros3-image::before{
+        inset: 12px 10px -12px -10px;
+    }
+}
+
+
+
+.especialidades1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.especialidades1-content{
+    width: 100%;
+    padding: 35px 140px;
+background-color: #EEF3F8;
+transition: opacity .2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+}
+.especialidades1-content.cambiando{
+    opacity: 0;
+}
+.especialidades1-texto{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.especialidades1-texto h3{
+    color: #1F4C7D;
+    text-shadow: 1px 2px 3px rgba(40, 50, 70, 0.15)
+}
+.especialidades1-texto h6{
+    color: #4FA3B6;
+}
+.especialidades1-image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.especialidades1-image img{
+    width: 100%;
+        aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.boton1.boton-activo{
+    background: #fff;
+    color: #1F4C7D;
+    box-shadow: 0 0 0 2px #1F4C7D, 0 6px 16px rgba(31,76,125,0.2);
+}
+
+
+.especialidades2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.especialidades2-content{
+    width: 100%;
+    padding: 0px 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.especialidades2-line{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.casos1{
+        width: 100%;
+        margin: 80px 0;
+        padding: 0 140px;
+        display: flex;
+        box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+
+}
+.casos1 h2{
+    color: #1F4C7D;
+}
+.casos2{
+    width: 100%;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 140px;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.eventos3-buscador{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+#buscadorEventos{
+    width: 90%;
+    max-width: 500px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border: 1px solid #b9c8ec;
+    background-color: #f7f9ff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease;
+}
+#buscadorEventos:focus{
+    border-color: #7ABAEA;
+    box-shadow: 0 0 10px rgba(41, 75, 149, 0.15);
+}
+
+
+.sedes1{
+    width: 100%;
+    padding: 0 140px;
+    margin-bottom: 80px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+

@@ -39,7 +39,7 @@
         <p class="hero-texto3">Diagnóstico digital, planes de tratamiento claros desde la primera visita y especialistas
             por cada área: de la limpieza al implante.</p>
         <div class="hero-botones">
-            <a href="" class="hero-boton1">Ver servicios</a>
+            <a href="especialidades/index.html" class="hero-boton1">Ver servicios</a>
             <a href="" class="hero-boton2">Escribir por WhatsApp</a>
         </div>
     </div>
@@ -126,7 +126,7 @@
             <div class="section1-tarjeta">
                 <div class="tarjeta1-image">
                     <img src="media/endodoncia.jpg" alt="">
-                    <a href="#" class="ver-especialidad">Ver especialidad</a>
+                    <a href="especialidades/?esp=endodoncia" class="ver-especialidad">Ver especialidad</a>
                 </div>
                 <div class="tarjeta1-text">
                     <h6>Endodoncia</h6>
@@ -136,7 +136,7 @@
             <div class="section1-tarjeta">
                 <div class="tarjeta1-image">
                     <img src="media/implante2.jpg" alt="">
-                    <a href="#" class="ver-especialidad">Ver especialidad</a>
+                    <a href="especialidades/?esp=protesis" class="ver-especialidad">Ver especialidad</a>
                 </div>
                 <div class="tarjeta1-text">
                     <h6>Prótesis Dental</h6>
@@ -146,7 +146,7 @@
             <div class="section1-tarjeta">
                 <div class="tarjeta1-image">
                     <img src="media/ortodoncia.jpg" alt="">
-                    <a href="#" class="ver-especialidad">Ver especialidad</a>
+                    <a href="especialidades/?esp=ortodoncia" class="ver-especialidad">Ver especialidad</a>
                 </div>
                 <div class="tarjeta1-text">
                     <h6>Ortodoncia</h6>
@@ -156,7 +156,7 @@
             <div class="section1-tarjeta">
                 <div class="tarjeta1-image">
                     <img src="media/odontopediatria.jpg" alt="">
-                    <a href="#" class="ver-especialidad">Ver especialidad</a>
+                    <a href="especialidades/?esp=odontopediatria" class="ver-especialidad">Ver especialidad</a>
                 </div>
                 <div class="tarjeta1-text">
                     <h6>Odontopediatría</h6>
@@ -166,7 +166,7 @@
         </div>
     </div>
     <div class="section1-boton">
-        <a class="boton1" href="">Ver todas las especialidades</a>
+        <a class="boton1" href="especialidades/index.html">Ver todas las especialidades</a>
     </div>
 </div>
 
@@ -226,7 +226,7 @@
         </div>
     </div>
     <div class="section1-boton">
-        <a class="boton1" href="">Ver más</a>
+        <a class="boton1" href="sobrenosotros/index.html">Ver más</a>
     </div>
 </div>
 
@@ -343,7 +343,7 @@
     <div class="carrusel-dots" id="carruselDots"></div>
 
     <div class="section1-boton">
-        <a class="boton1" href="">Ver todos los casos</a>
+        <a class="boton1" href="casos/index.html">Ver todos los casos</a>
     </div>
 </div>
 
@@ -406,7 +406,7 @@
             <i class="fa-solid fa-phone"></i>
             <div>
                 <b>Llámanos</b>
-                <span>(01) 234-5678</span>
+                <span>(+51) 999999999</span>
             </div>
         </div>
         <div class="contacto-item">
@@ -430,21 +430,25 @@
         <div class="form-arriba">
             <div class="form-izq">
                 <label for="campoNombre">Nombre</label>
-                <input type="text" id="campoNombre" placeholder="Ingresa tu nombre aqui" required>
+                <input type="text" id="campoNombre" placeholder="Ingresa tu nombre aqui" pattern=".*\S.*" autocomplete="given-name" required>
+
                 <label for="campoApellido">Apellido</label>
-                <input type="text" id="campoApellido" placeholder="Ingresa tu apellido aqui" required>
+                <input type="text" id="campoApellido" placeholder="Ingresa tu apellido aqui" pattern=".*\S.*" autocomplete="family-name" required>
+
                 <label for="campoTelefono">Número telefónico</label>
-                <input type="text" id="campoTelefono" placeholder="Ingresa tu número aqui" required>
+                <input type="tel" id="campoTelefono" placeholder="Ej: 987 654 321" pattern="(\+?51 ?)?9( ?[0-9]){8}" inputmode="numeric" autocomplete="tel" required>
             </div>
             <div class="form-der">
                 <label for="campoCorreo">Correo Electrónico</label>
-                <input type="text" id="campoCorreo" placeholder="Ingresa tu correo aqui" required>
+                <input type="email" id="campoCorreo" placeholder="Ej: nombre@correo.com" pattern="[^\s@]+@[^\s@]+\.[^\s@]{2,}" autocomplete="email" required>
+
                 <label for="campoSede">Sede</label>
                 <select id="campoSede" name="sede" required>
                     <option value="" disabled selected>- Elige una opción -</option>
                     <option value="Jesús María">Jesús María</option>
                     <option value="Lince">Lince</option>
                 </select>
+
                 <label for="campoEspecialidad">Especialidad de Interes</label>
                 <select id="campoEspecialidad" name="especialidad" required>
                     <option value="" disabled selected>- Elige una opción -</option>
