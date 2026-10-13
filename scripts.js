@@ -1,3 +1,5 @@
+const BASE = "/acdental/";
+
 document.addEventListener("DOMContentLoaded", () => {
 
     // Detecta automáticamente la raíz del proyecto
@@ -494,56 +496,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const especialidades = {
     ortodoncia: {
-        imagen: './media/ortodoncia.jpg',
+        imagen: '${BASE}media/ortodoncia.jpg',
         titulo: 'Ortodoncia',
         subtitulo: 'Corrige la posición de tus dientes y tu mordida',
         parrafo1: 'La ortodoncia alinea los dientes y corrige la forma en que encajan al morder. Una buena alineación mejora la estética de la sonrisa, facilita la higiene diaria y reduce el desgaste irregular de las piezas dentales.',
         parrafo2: 'Contamos con opciones como brackets y alineadores transparentes, según las necesidades de cada paciente. Tras evaluar tu caso, te explicamos el plan, la duración estimada y los controles necesarios para llegar al resultado esperado.'
     },
     endodoncia: {
-        imagen: './media/endodoncia.jpg',
+        imagen: '${BASE}media/endodoncia.jpg',
         titulo: 'Endodoncia',
         subtitulo: 'Conserva tu diente natural',
         parrafo1: 'La endodoncia, o tratamiento de conducto, se realiza cuando la pulpa del diente se infecta o se daña por una caries profunda, un golpe o un tratamiento previo. Consiste en limpiar el interior del diente y sellarlo para eliminar el dolor y la infección.',
         parrafo2: 'Gracias a este procedimiento, muchas piezas que antes se habrían extraído pueden conservarse. Se realiza con anestesia local y, en la mayoría de los casos, el paciente retoma su rutina con normalidad.'
     },
     protesis: {
-        imagen: './media/implante2.jpg',
+        imagen: '${BASE}media/implante2.jpg',
         titulo: 'Prótesis Dental',
         subtitulo: 'Recupera tu función y tu estética',
         parrafo1: 'Las prótesis dentales reemplazan uno o varios dientes ausentes y devuelven la capacidad de masticar y hablar con comodidad. Pueden ser fijas o removibles, y se fabrican a medida para que se adapten a tu boca.',
         parrafo2: 'Al diseñarlas tomamos en cuenta la forma, el color y el tamaño de tus dientes naturales, de modo que el resultado se vea armónico. Te asesoramos sobre la opción más adecuada según tu salud bucal y tus expectativas.'
     },
     implantes: {
-        imagen: './media/caso-implante.jpg',
+        imagen: '${BASE}media/caso-implante.jpg',
         titulo: 'Implantes Dentales',
         subtitulo: 'Reemplaza dientes perdidos de forma estable',
         parrafo1: 'Un implante dental es una pieza de titanio que se coloca en el hueso maxilar y funciona como raíz artificial. Sobre ella se fija una corona, logrando un diente de aspecto y función muy similares a uno natural.',
         parrafo2: 'Antes del procedimiento realizamos una evaluación completa, que incluye estudios por imágenes, para planificar cada paso con precisión. El tiempo total varía según el caso, ya que requiere un periodo de cicatrización antes de colocar la corona definitiva.'
     },
     profilaxis: {
-        imagen: './media/caso-profilaxis.jpg',
+        imagen: '${BASE}media/caso-profilaxis.jpg',
         titulo: 'Profilaxis Dental',
         subtitulo: 'Limpieza profesional para cuidar tu salud bucal',
         parrafo1: 'La profilaxis es una limpieza profesional que elimina la placa bacteriana, el sarro y las manchas que el cepillado diario no logra retirar. Es la base para prevenir caries, inflamación de encías y mal aliento.',
         parrafo2: 'Recomendamos realizarla periódicamente, con una frecuencia que definimos según tu caso. Es un procedimiento rápido y cómodo, y además nos permite detectar a tiempo cualquier problema antes de que se vuelva mayor.'
     },
     odontopediatria: {
-        imagen: './media/odontopediatria.jpg',
+        imagen: '${BASE}media/odontopediatria.jpg',
         titulo: 'Odontopediatría',
         subtitulo: 'Atención especializada para los más pequeños',
         parrafo1: 'La odontopediatría se enfoca en la salud bucal de bebés, niños y adolescentes, acompañando el desarrollo de sus dientes y de su mordida. Las primeras visitas ayudan a prevenir problemas y a que los niños se familiaricen con el consultorio.',
         parrafo2: 'Nuestro equipo trabaja con un trato paciente y cercano para que cada consulta sea una experiencia tranquila. Además, orientamos a los padres sobre higiene, alimentación y hábitos que cuidan la sonrisa desde temprana edad.'
     },
     estetica: {
-        imagen: './media/estetica.jpg',
+        imagen: '${BASE}media/estetica.jpg',
         titulo: 'Estética Dental',
         subtitulo: 'Diseña la sonrisa que quieres',
         parrafo1: 'La estética dental reúne tratamientos pensados para mejorar la apariencia de tu sonrisa, como el blanqueamiento, las carillas o las resinas estéticas. Se adaptan a la forma, el tono y las proporciones de tu rostro.',
         parrafo2: 'Antes de comenzar, evaluamos tu salud bucal y conversamos sobre lo que buscas lograr, para recomendarte la opción más adecuada. El objetivo es un resultado natural, que luzca bien y que además sea saludable.'
     },
     cirugias: {
-        imagen: './media/cirugia.jpg',
+        imagen: '${BASE}media/cirugia.jpg',
         titulo: 'Cirugías',
         subtitulo: 'Procedimientos quirúrgicos con planificación y cuidado',
         parrafo1: 'Realizamos cirugías orales como la extracción de terceras molares (muelas del juicio), la extracción de piezas dañadas o la preparación del hueso para colocar implantes. Cada intervención se planifica previamente con estudios de apoyo.',
