@@ -1591,7 +1591,7 @@ details p{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(#161616b3, #161616b3), url(../media/hero3.jpg) center center;
+    background: linear-gradient(#161616b3, #161616b3), url(./media/hero3.jpg) center center;
     background-size: cover;
 }
 .sobrenosotros-hero-content{
